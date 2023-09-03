@@ -6,13 +6,14 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './auth/Login';
+import SignUp from './auth/SignUp';
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />}>
-        </Route>
+        <Route path="/" element={ <Login /> } />
+        <Route path="/signup" element={ <SignUp /> } />
       </Routes>
     </BrowserRouter>
   );
