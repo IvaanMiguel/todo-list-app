@@ -18,9 +18,14 @@ code {
   aspect-ratio: 1/1;
 }
 
-.form {
+.form-container {
   width: 100%;
   max-width: 640px;
 }
 
-.btn-mw { max-width: 200px; }
+.btn-mw {
+  min-width: 140px;
+  width: fit-content;
+}
+
+
