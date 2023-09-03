@@ -1,24 +1,34 @@
-import logo from '../images/todo-logo.png'
 import userIcon from '../images/user-icon.png'
 import passwordIcon from '../images/password-icon.png'
 
 import Textfield from '../components/Textfield.js';
+import Layout from './Layout.js';
+import { Link } from 'react-router-dom';
 
 function Login() {
   return (
-    <div className='container-xl py-2 px-5 d-flex justify-content-center flex-column'>
-      <img className='logo mx-auto' src={ logo } alt='TODO logo'></img>
-      <h1 className='my-3 text-center'>Login</h1>
-      <form className='form mx-auto'>
+    <Layout bottom={ <Bottom /> }>
+      <h1 className='mb-3 text-center'>Login</h1>
+      <form className='mx-auto'>
         <Textfield name='username' label='Username' icon={ userIcon } />
         <Textfield name='password' label='Password' type='password' icon={ passwordIcon } />
-        <div className='row mx-auto flex-column gap-3'>
+        <div className='row mx-auto flex-column gap-1'>
           <button className='btn btn-primary btn-mw mx-auto'>Login</button>
-          <button className='btn btn-link btn-mw mx-auto'>Forgot password?</button>
+          <button className='btn btn-link btn-sm btn-mw mx-auto'>Forgot password?</button>
         </div>
       </form>
-    </div>
+    </Layout>
   );
+}
+
+function Bottom() {
+  return (
+    <div className='row mt-1'>
+      <Link to='/signup' className='btn btn-link btn-mw mx-auto'>
+        Don't you have an account?
+      </Link>
+    </div>
+  )
 }
 
 export default Login;
