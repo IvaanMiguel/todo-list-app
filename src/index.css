@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.logo {
+  width: 50%;
+  max-width: 175px;
+  aspect-ratio: 1/1;
+}
+
+.form {
+  width: 100%;
+  max-width: 640px;
+}
+
+.btn-mw { max-width: 200px; }
