@@ -7,13 +7,17 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './auth/Login';
 import SignUp from './auth/SignUp';
+import ForgotPass from './auth/ForgotPass';
+import ChangePass from './auth/ChangePass';
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={ <Login /> } />
-        <Route path="/signup" element={ <SignUp /> } />
+        <Route path="/" element={ <Login /> }/>
+        <Route path="/sign-up" element={ <SignUp /> }/>
+        <Route path="/forgot-password" element={ <ForgotPass /> }/>
+        <Route path="/change-password" element={ <ChangePass /> }/>
       </Routes>
     </BrowserRouter>
   );
