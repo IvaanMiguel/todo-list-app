@@ -10,11 +10,13 @@ function Login() {
     <Layout bottom={ <Bottom /> }>
       <h1 className='mb-3 text-center'>Login</h1>
       <form className='mx-auto'>
-        <Textfield name='username' label='Username' icon={ userIcon } />
-        <Textfield name='password' label='Password' type='password' icon={ passwordIcon } />
+        <Textfield name='username' label='Username' icon={ userIcon }/>
+        <Textfield name='password' label='Password' type='password' icon={ passwordIcon }/>
         <div className='row mx-auto flex-column gap-1'>
           <button className='btn btn-primary btn-mw mx-auto'>Login</button>
-          <button className='btn btn-link btn-sm btn-mw mx-auto'>Forgot password?</button>
+          <Link to='forgot-password' className='btn btn-link btn-sm btn-mw mx-auto'>
+            Forgot password?
+          </Link>
         </div>
       </form>
     </Layout>
@@ -24,7 +26,7 @@ function Login() {
 function Bottom() {
   return (
     <div className='row mt-1'>
-      <Link to='/signup' className='btn btn-link btn-mw mx-auto'>
+      <Link to='/sign-up' className='btn btn-link btn-mw mx-auto'>
         Don't you have an account?
       </Link>
     </div>
