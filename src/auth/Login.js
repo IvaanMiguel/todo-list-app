@@ -6,11 +6,13 @@ import Layout from './Layout.js';
 import { Link } from 'react-router-dom';
 
 function Login() {
+  const validateUsername = username => /\d+/gi.test(username)
+
   return (
     <Layout bottom={ <Bottom /> }>
       <h1 className='mb-3 text-center'>Login</h1>
       <form className='mx-auto'>
-        <Textfield name='username' label='Username' icon={ userIcon }/>
+        <Textfield name='username' label='Username' icon={ userIcon } validation={ validateUsername } />
         <Textfield name='password' label='Password' type='password' icon={ passwordIcon }/>
         <div className='row mx-auto flex-column gap-1'>
           <button className='btn btn-primary btn-mw mx-auto'>Login</button>
