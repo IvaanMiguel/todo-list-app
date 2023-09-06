@@ -6,7 +6,7 @@ import Layout from './Layout.js';
 import { Link } from 'react-router-dom';
 
 function Login() {
-  const validateUsername = username => /\d+/gi.test(username)
+  const validateUsername = username => /\d+/.test(username)
 
   return (
     <Layout bottom={ <Bottom /> }>

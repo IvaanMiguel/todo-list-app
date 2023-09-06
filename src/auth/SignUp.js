@@ -8,8 +8,7 @@ import { Link } from 'react-router-dom';
 
 function SignUp() {
   const validateUsername = username => /\d+/.test(username)
-  // const validateEmail = email => !/\S+@\S+\.\S+/.test(email)
-  const validateEmail = email => !/^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/.test(email)
+  const validateEmail = email => !/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/.test(email)
 
   return (
     <Layout bottom={ <Bottom /> }>
